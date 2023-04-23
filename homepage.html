@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+     body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6f8fa;
+  color: #333;
+}
+
+form {
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 30px;
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+.msg {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.btn {
+  background-color: rgb(0, 160, 253)
+  color: #fff;
+  margin: 8px 0;
+  cursor: pointer;
+  padding: 14px 20px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.container {
+  padding: 20px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+  font-size: 16px;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #777;
+}
+
+.bottom a {
+  color: rgb(0, 160, 253);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+    </style>
+  </head>
+  <body>
+    <form action="{{ url_for('homepage') }}" method="post">
+      <div class="container">
+        <h2>Login</h2>
+        <div class="msg">{{ msg }}</div>
+        <label for="username"><b>Username</b></label>
+        <input id="username" name="username" type="text" placeholder="Enter your username" required>
+        <label for="password"><b>Password</b></label>
+        <input id="password" name="password" type="password" placeholder="Enter your password" required>
+        <input type="submit" class="btn" value="Sign In">
+        <p class="bottom">Don't have an account? <a href="{{ url_for('register')}}">Register here</a></p>
+      </div>
+    </form>
+  </body>
+</html>

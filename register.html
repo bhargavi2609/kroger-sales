@@ -1,0 +1,75 @@
+<!-- Store this code in 'login.html' file inside the 'templates' folder -->
+
+<html> 
+	<head> 
+		<meta charset="UTF-8"> 
+		<title> Register </title> 
+		<style>
+            body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+}
+
+form {
+  border: 3px solid #f1f1f1;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #006699;
+  color: #fff;
+  margin: 8px 0;
+  cursor: pointer;
+  padding: 14px 20px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bottom a {
+  color: #006699;
+}
+
+        </style>		 
+	</head> 
+	<body></br></br></br></br></br> 
+		<div align="center" class="container"> 
+            <h2>Register</h2>
+				<form action = {{ url_for('register') }} method="post"> 
+                    <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox" required/></br></br>  
+					<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox" required/></br></br> 
+                    <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox" required/></br></br></br> 
+                    <input type="submit" class="btn"  value="Sign Up"></br> 
+				</form> 
+		</div> 
+	</body> 
+</html> 
